@@ -3,6 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ==================== GOOGLE CONSENT MODE v2 – BOOTSTRAP ====================
+     Setzt NUR den Standard-Einwilligungszustand (alles abgelehnt).
+     Es wird hier KEIN gtag.js geladen und KEINE Verbindung zu Google aufgebaut.
+     gtag.js wird erst nach ausdrücklicher Zustimmung dynamisch nachgeladen. -->
+<script>
+  // Zentrale Mess-ID
+  const GA_MEASUREMENT_ID = 'G-Q78QKT9BL4';
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+
+  // Standard: ALLE Einwilligungen abgelehnt, bis der Nutzer aktiv zustimmt.
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied'
+  });
+</script>
 <title>KI-Workshops &amp; Beratung · Zukunftszauber AI</title>
 <meta name="description" content="Praxisnahe KI-Workshops für Kommunen, Vereine und kleine Unternehmen. Von Carolin Laux, Zukunftszauber AI. Aus der Praxis, für den Arbeitsalltag.">
 <meta property="og:type" content="website">
@@ -192,6 +212,25 @@ footer a:hover{color:var(--purple);}
   .proof{padding:40px 24px;}
   nav a{margin-left:14px;}
 }
+
+/* ---------- Cookie-Banner (Design an bestehende Tokens angelehnt) ---------- */
+.cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;padding:18px 24px;
+  background:rgba(255,255,255,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-top:1px solid var(--glass-border);box-shadow:0 -8px 30px rgba(36,27,58,.14);}
+.cookie-banner.show{display:block;}
+.cookie-inner{max-width:var(--maxw);margin:0 auto;display:flex;gap:24px;align-items:center;
+  flex-wrap:wrap;justify-content:space-between;}
+.cookie-text{flex:1 1 420px;}
+.cookie-text strong{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--ink);display:block;margin-bottom:6px;}
+.cookie-text p{color:var(--ink-soft);font-size:.9rem;line-height:1.5;margin:0 0 10px;}
+.cookie-toggle{display:inline-flex;align-items:center;gap:8px;font-size:.9rem;color:var(--ink);cursor:pointer;font-weight:700;}
+.cookie-toggle input{width:18px;height:18px;accent-color:var(--purple);cursor:pointer;}
+.cookie-actions{display:flex;gap:12px;align-items:center;flex-wrap:wrap;}
+.cookie-banner .btn{padding:12px 22px;font-size:.92rem;}
+.cookie-save{background:none;border:none;color:var(--purple-deep);font-weight:700;font-size:.9rem;
+  cursor:pointer;text-decoration:underline;text-underline-offset:2px;padding:6px 4px;}
+.cookie-save:hover{color:var(--purple);}
+@media(max-width:640px){.cookie-actions{width:100%;}.cookie-banner .btn{flex:1 1 auto;text-align:center;}}
 </style>
 </head>
 <body>
@@ -376,7 +415,7 @@ footer a:hover{color:var(--purple);}
 
 <footer class="wrap">
   <p>© 2026 Zukunftszauber AI · Carolin Laux</p>
-  <p><a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutzerklärung</a></p>
+  <p><a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutzerklärung</a> · <a href="#" id="cookie-settings">Cookie-Einstellungen</a></p>
 </footer>
 
 <!-- ==================== IMPRESSUM ==================== -->
@@ -426,8 +465,24 @@ footer a:hover{color:var(--purple);}
     <h3>3. Kontaktaufnahme</h3>
     <p>Wenn Sie mich per E-Mail oder Telefon kontaktieren, werden Ihre Angaben (z.&nbsp;B. Name, Kontaktdaten, Inhalt der Anfrage) zur Bearbeitung der Anfrage und für Anschlussfragen gespeichert. Rechtsgrundlage ist Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;b DSGVO (Anbahnung bzw. Durchführung eines Vertrags) sowie Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO. Die Daten werden gelöscht, sobald sie für die Bearbeitung nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
 
-    <h3>4. Keine Cookies, kein Tracking</h3>
-    <p>Diese Website verwendet keine Cookies, keine Analyse- oder Tracking-Dienste und keine Inhalte von Drittanbietern. Alle Schriftarten sind lokal eingebunden; es findet keine Verbindung zu externen Schriftdiensten (z.&nbsp;B. Google Fonts) statt.</p>
+    <h3>4. Google Analytics (nur mit Ihrer Einwilligung)</h3>
+    <p>Diese Website nutzt Google Analytics 4, einen Webanalysedienst von Google, zur statistischen Auswertung der Seitennutzung. Google Analytics wird <strong>ausschließlich dann geladen und aktiv</strong>, wenn Sie im Cookie-Banner der Kategorie „Statistik“ ausdrücklich zustimmen.</p>
+    <p>Vor einer Einwilligung werden keine Verbindungen zu Google hergestellt, keine Skripte von Google geladen und keine Analyse-Cookies gesetzt. Umgesetzt ist dies über den Google Consent Mode v2: Standardmäßig sind alle Einwilligungen – sowohl für Analyse als auch für Werbung – auf „abgelehnt“ gesetzt. Erst nach Ihrer Zustimmung zur Statistik wird der Analyse-Speicher aktiviert; die werbebezogenen Einwilligungen bleiben dauerhaft abgelehnt, da keine Werbung eingesetzt wird.</p>
+    <p>Nach der Einwilligung setzt Google Analytics Cookies und erfasst Seitenaufrufe. Ihre Einwilligung können Sie jederzeit über den Link „Cookie-Einstellungen“ im Seitenfuß widerrufen. Nach einem Widerruf wird die Messung beendet und vorhandene Analyse-Cookies werden nach Möglichkeit gelöscht.</p>
+    <p>Die auf dieser Website verwendeten Schriftarten sind weiterhin lokal eingebunden; es besteht keine Verbindung zu externen Schriftdiensten (z.&nbsp;B. Google Fonts).</p>
+    <!--
+      RECHTLICH ZU PRÜFEN / ERGÄNZEN vor Veröffentlichung (NICHT öffentlich sichtbar):
+      - Rechtsgrundlage der Verarbeitung: Einwilligung. Zutreffende Norm(en) juristisch prüfen und
+        ergänzen (üblicherweise Art. 6 Abs. 1 DSGVO i.V.m. den Cookie-Vorgaben des TDDDG).
+        Nicht ungeprüft übernehmen.
+      - Anbieter/Verantwortlicher des Dienstes: vollständige Firmierung und Anschrift von Google ergänzen.
+      - Mess-ID: G-Q78QKT9BL4.
+      - Speicher-/Aufbewahrungsdauer der erhobenen Daten und der gesetzten Cookies: konkrete Dauer
+        prüfen und eintragen (nicht erfinden).
+      - Datenübermittlung in Drittländer (USA): Übermittlungsmechanismus (z. B. EU-Standardvertrags-
+        klauseln, Angemessenheitsbeschluss) prüfen und ergänzen.
+      - Betroffenenrechte/Widerruf ggf. mit Abschnitt 5 abstimmen.
+    -->
 
     <h3>5. Ihre Rechte</h3>
     <p>Sie haben gegenüber mir folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten:</p>
@@ -445,6 +500,114 @@ footer a:hover{color:var(--purple);}
     <p>Juli 2026. Diese Erklärung wird bei Änderungen der Website angepasst.</p>
   </div>
 </div>
+
+<!-- ==================== COOKIE-BANNER ==================== -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Cookie-Einstellungen" aria-live="polite">
+  <div class="cookie-inner">
+    <div class="cookie-text">
+      <strong>Cookies &amp; Statistik</strong>
+      <p>Diese Website funktioniert vollständig ohne Statistik. Zusätzlich kann ich mit Google Analytics anonymisierte Nutzungsstatistiken erheben, um die Seite zu verbessern – aber nur, wenn Sie hier zustimmen.</p>
+      <label class="cookie-toggle"><input type="checkbox" id="cookie-statistik"> Statistik (Google Analytics)</label>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn primary" id="cookie-accept-all" type="button">Alle akzeptieren</button>
+      <button class="btn ghost" id="cookie-necessary" type="button">Nur notwendige</button>
+      <button class="cookie-save" id="cookie-save" type="button">Auswahl speichern</button>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== CONSENT-LOGIK (Google Consent Mode v2) ==================== -->
+<script>
+(function(){
+  var STORAGE_KEY = 'zz_cookie_consent';
+  var gaLoaded = false;
+
+  var banner   = document.getElementById('cookie-banner');
+  var toggle   = document.getElementById('cookie-statistik');
+  var btnAll   = document.getElementById('cookie-accept-all');
+  var btnNec   = document.getElementById('cookie-necessary');
+  var btnSave  = document.getElementById('cookie-save');
+  var settings = document.getElementById('cookie-settings');
+
+  function readConsent(){
+    try { var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : null; }
+    catch(e){ return null; }
+  }
+  function saveConsent(statistik){
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ statistik: statistik, stand: new Date().toISOString() })); }
+    catch(e){}
+  }
+
+  // gtag.js dynamisch nachladen (erst nach Einwilligung, genau einmal)
+  function loadGA(){
+    if (gaLoaded) return;
+    gaLoaded = true;
+    var sc = document.createElement('script');
+    sc.async = true;
+    sc.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_MEASUREMENT_ID;
+    document.head.appendChild(sc);
+    gtag('js', new Date());
+    gtag('config', GA_MEASUREMENT_ID);
+  }
+
+  function grantStatistik(){
+    // NUR analytics_storage wird freigegeben; Werbe-Einwilligungen bleiben 'denied'.
+    gtag('consent', 'update', { 'analytics_storage': 'granted' });
+    loadGA();
+  }
+
+  function deleteGACookies(){
+    var domain = location.hostname;
+    document.cookie.split(';').forEach(function(c){
+      var name = c.split('=')[0].trim();
+      if (name === '_ga' || name === '_gid' || name.indexOf('_ga_') === 0 || name.indexOf('_gat') === 0){
+        ['','; domain=' + domain, '; domain=.' + domain].forEach(function(d){
+          document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + d;
+        });
+      }
+    });
+  }
+
+  function showBanner(){
+    var stored = readConsent();
+    if (toggle) toggle.checked = !!(stored && stored.statistik === true);
+    if (banner) banner.classList.add('show');
+  }
+  function hideBanner(){ if (banner) banner.classList.remove('show'); }
+
+  // Zentrale Auswahl-Anwendung
+  function applyChoice(statistik){
+    var prev = readConsent();
+    saveConsent(statistik);
+    if (statistik){
+      grantStatistik();
+      hideBanner();
+    } else {
+      gtag('consent', 'update', { 'analytics_storage': 'denied' });
+      deleteGACookies();
+      hideBanner();
+      // War zuvor zugestimmt und wird jetzt widerrufen: fuer vollstaendige
+      // Beendigung der bereits laufenden Messung Seite neu laden.
+      if (prev && prev.statistik === true){ location.reload(); }
+    }
+  }
+
+  if (btnAll)  btnAll.addEventListener('click',  function(){ applyChoice(true); });
+  if (btnNec)  btnNec.addEventListener('click',  function(){ applyChoice(false); });
+  if (btnSave) btnSave.addEventListener('click', function(){ applyChoice(!!(toggle && toggle.checked)); });
+  if (settings) settings.addEventListener('click', function(e){ e.preventDefault(); showBanner(); });
+
+  // Initialzustand
+  var stored = readConsent();
+  if (stored === null){
+    showBanner();                 // Noch keine Auswahl -> Banner zeigen, nichts laden
+  } else if (stored.statistik === true){
+    grantStatistik();             // Frueher zugestimmt -> Messung fortsetzen
+  }
+  // stored.statistik === false -> nichts tun (bleibt 'denied')
+})();
+</script>
 
 </body>
 </html>
