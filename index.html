@@ -113,6 +113,16 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--purple);outline-off
 .btn.primary:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(109,40,217,.42);}
 .btn.ghost{background:transparent;color:var(--purple-deep);border:2px solid var(--purple);}
 .btn.ghost:hover{background:rgba(109,40,217,.08);}
+.contact-btns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;align-items:center;margin-bottom:6px;}
+.btn.instagram{display:inline-flex;align-items:center;gap:10px;color:#fff;
+  background:linear-gradient(135deg,#feda75 0%,#fa7e1e 25%,#d62976 55%,#962fbf 80%,#4f5bd5 100%);
+  box-shadow:0 12px 28px rgba(214,41,118,.32);}
+.btn.instagram:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(214,41,118,.42);}
+.btn.instagram svg{width:20px;height:20px;fill:currentColor;}
+.btn.linkedin{display:inline-flex;align-items:center;gap:10px;color:#fff;
+  background:linear-gradient(135deg,#0a66c2,#004182);box-shadow:0 12px 28px rgba(10,102,194,.30);}
+.btn.linkedin:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(10,102,194,.42);}
+.btn.linkedin svg{width:20px;height:20px;fill:currentColor;}
 
 /* ---------- Abschnitte ---------- */
 section{padding:72px 0;}
@@ -332,7 +342,7 @@ footer a:hover{color:var(--purple);}
           <li>Offene Termine, zu denen sich auch einzelne Personen anmelden können</li>
           <li>Kompakte Live-Einführung mit Demos und Fragerunde</li>
           <li>Ideal, wenn kein Team-Budget für einen Vor-Ort-Termin da ist</li>
-          <li>Im Anschluss Zugang zum Zukunftszauber Campus zum Vertiefen</li>
+          <li>Im Anschluss Zugang zum <a href="https://www.campus-zukunftszauberai.de" target="_blank" rel="noopener" style="color:var(--purple-deep);text-decoration:underline;text-underline-offset:2px;">Zukunftszauber Campus</a> zum Vertiefen</li>
         </ul>
         <p class="price">auf Anfrage<small>pro Person, ohne Anfahrt</small></p>
         <a class="btn ghost" href="#kontakt">Platz anfragen</a>
@@ -355,8 +365,7 @@ footer a:hover{color:var(--purple);}
       <div class="proof-grid">
         <div class="proof-item">
           <h4>Eigener Lern-Campus</h4>
-          <p>Alle Teilnehmenden erhalten Zugang zum <a href="https://CAMPUS-URL-EINTRAGEN.de" target="_blank" rel="noopener" style="color:var(--gold-soft);text-decoration:underline;text-underline-offset:2px;">Zukunftszauber Campus</a>. Dort vertiefen sie das Gelernte in eigenem Tempo, auch einzeln als monatlicher Zugang buchbar.</p>
-          <!-- TODO: öffentliche Campus-URL eintragen (ersetzt https://CAMPUS-URL-EINTRAGEN.de) -->
+          <p>Alle Teilnehmenden erhalten Zugang zum <a href="https://www.campus-zukunftszauberai.de" target="_blank" rel="noopener" style="color:var(--gold-soft);text-decoration:underline;text-underline-offset:2px;">Zukunftszauber Campus</a>. Dort vertiefen sie das Gelernte in eigenem Tempo, auch einzeln als monatlicher Zugang buchbar.</p>
         </div>
         <div class="proof-item">
           <h4>Schulung &amp; Material</h4>
@@ -429,8 +438,12 @@ footer a:hover{color:var(--purple);}
       <span class="eyebrow">Kontakt</span>
       <h2>Lassen Sie uns starten.</h2>
       <p>Schreiben Sie mir kurz, wer Sie sind und was Sie vorhaben. Ich melde mich innerhalb von zwei Werktagen mit einem Terminvorschlag für ein kostenloses Vorgespräch.</p>
-      <a class="btn primary" href="mailto:hallo@zukunftszauberai.de?subject=Anfrage%20KI-Workshop">Anfrage per E-Mail senden</a>
-      <p class="mail">oder direkt an: <a href="mailto:hallo@zukunftszauberai.de">hallo@zukunftszauberai.de</a><br>Telefon: <a href="tel:+4917631495552">0176&nbsp;31495552</a><br>Instagram: <a href="https://www.instagram.com/zukunftszauber_ai_" rel="noopener">@zukunftszauber_ai_</a><br>LinkedIn: <a href="https://www.linkedin.com/in/carolin-laux-bb52b0301/" rel="noopener">Carolin Laux</a></p>
+      <div class="contact-btns">
+        <a class="btn primary" href="mailto:hallo@zukunftszauberai.de?subject=Anfrage%20KI-Workshop">Anfrage per E-Mail senden</a>
+        <a class="btn instagram" href="https://www.instagram.com/zukunftszauber_ai_" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.81-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.81-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.81.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63 3.35.94 2.68 1.35 2.01 2.02 1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.79.72 1.46 1.38 2.13.67.66 1.34 1.07 2.13 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.31 1.46-.72 2.13-1.38.66-.67 1.07-1.34 1.38-2.13.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.9 5.9 0 0 0-1.38-2.13A5.9 5.9 0 0 0 19.86.63c-.76-.3-1.64-.5-2.91-.56C15.67.01 15.26 0 12 0z"/><path d="M12 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84M12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4z"/><circle cx="18.41" cy="5.59" r="1.44"/></svg>Auf Instagram folgen</a>
+        <a class="btn linkedin" href="https://www.linkedin.com/in/carolin-laux-bb52b0301/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 0 1-2.06-2.07 2.06 2.06 0 1 1 2.06 2.07zm1.78 13.02H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>Auf LinkedIn vernetzen</a>
+      </div>
+      <p class="mail">oder direkt an: <a href="mailto:hallo@zukunftszauberai.de">hallo@zukunftszauberai.de</a><br>Telefon: <a href="tel:+4917631495552">0176&nbsp;31495552</a></p>
     </div>
   </section>
 </main>
