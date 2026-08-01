@@ -158,6 +158,15 @@ section{padding:72px 0;}
   color:var(--purple-deep);background:rgba(109,40,217,.10);border-radius:999px;padding:5px 12px;margin-bottom:16px;}
 .pack .btn{margin-top:20px;text-align:center;}
 .packnote{text-align:center;color:var(--ink-soft);font-size:.9rem;margin-top:26px;}
+/* ---------- Weitere Leistungen ---------- */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;max-width:760px;margin:0 auto;}
+.service{background:var(--glass);border:1px solid var(--glass-border);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-radius:var(--radius);padding:30px 28px;box-shadow:0 14px 40px rgba(61,30,120,.10);display:flex;flex-direction:column;}
+.service .kind{font-family:'Space Mono',monospace;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--purple);}
+.service h3{font-family:'Playfair Display',serif;font-weight:700;font-size:1.35rem;margin:10px 0 8px;}
+.service p{color:var(--ink-soft);font-size:.96rem;margin:0 0 16px;flex:1;}
+.service .price{font-size:1.05rem;margin-bottom:16px;}
+.service .btn{text-align:center;}
 
 /* ---------- Praxis-Beweis ---------- */
 .proof{background:linear-gradient(135deg,var(--purple-deep),#2a1458);border-radius:var(--radius);color:#f1ecff;padding:56px 40px;}
@@ -257,7 +266,9 @@ footer a:hover{color:var(--purple);}
   <div class="brand">
     <a class="logo" href="#">Zukunftszauber <span>AI</span></a>
     <nav aria-label="Hauptnavigation">
-      <a href="#angebote">Angebote</a>
+      <a href="#offene-kurse">Kurse</a>
+      <a href="#angebote">Für Teams</a>
+      <a href="#leistungen">Leistungen</a>
       <a href="#praxis">Praxis</a>
       <a href="#ablauf">Ablauf</a>
       <a href="#kontakt">Kontakt</a>
@@ -275,11 +286,83 @@ footer a:hover{color:var(--purple);}
       <a class="btn primary" href="#angebote">Angebote ansehen</a>
       <a class="btn ghost" href="#kontakt">Unverbindlich anfragen</a>
     </div>
+    <p style="font-family:'Space Mono',monospace;font-size:.8rem;color:var(--purple-deep);margin-top:20px;background:rgba(109,40,217,.08);border-radius:999px;padding:8px 16px;display:inline-block;">Neu: offene Online-Kurse für Kinder, Erwachsene &amp; Familien, ganz ohne Firmen-Budget einzeln buchbar.</p>
   </div>
+
+  <section id="offene-kurse" class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Live online · für Einzelpersonen</span>
+      <h2>Offene KI-Kurse für dich &amp; deine Familie</h2>
+      <p><strong>Feste Online-Termine, zu denen sich einzelne Personen anmelden können.</strong> Kein Firmen-Budget nötig, keine Anfahrt, einfach dazubuchen und mitmachen.</p>
+    </div>
+    <div class="packs">
+      <article class="pack">
+        <span class="kind">Mit Pixel · 9 bis 12 Jahre</span>
+        <h3>KI entdecken mit Pixel</h3>
+        <p class="dur">Live online · ca. 60 Minuten</p>
+        <span class="fmt">◇ 100 % online, keine Anfahrt</span>
+        <ul>
+          <li>Pixel kommt mit dir der KI auf die Spur: Wie „denkt" sie?</li>
+          <li>Warum KI auch mal Quatsch erzählt und man das merkt</li>
+          <li>Gute Fragen stellen: Prompten spielerisch geübt</li>
+          <li>Echt oder KI-gemacht? Das große Erkenn-Spiel</li>
+        </ul>
+        <p class="price">39 €<small>pro Kind, pro Termin</small></p>
+        <a class="btn ghost" href="#kontakt">Platz sichern</a>
+      </article>
+
+      <article class="pack">
+        <span class="kind">Für Jugendliche · 13 bis 17 Jahre</span>
+        <h3>KI verstehen statt nur nutzen</h3>
+        <p class="dur">Live online · ca. 90 Minuten</p>
+        <span class="fmt">◇ 100 % online, keine Anfahrt</span>
+        <ul>
+          <li>Wie ChatGPT &amp; Co. wirklich funktionieren</li>
+          <li>KI clever für Schule, Referate und Lernen nutzen</li>
+          <li>Deepfakes und Fake News sicher erkennen</li>
+          <li>Gute Prompts schreiben und Ergebnisse hinterfragen</li>
+        </ul>
+        <p class="price">39 €<small>pro Person, pro Termin</small></p>
+        <a class="btn ghost" href="#kontakt">Platz sichern</a>
+      </article>
+
+      <article class="pack hot">
+        <span class="badge">Beliebt bei Eltern</span>
+        <span class="kind">Für Erwachsene &amp; Eltern</span>
+        <h3>KI im Alltag verstehen</h3>
+        <p class="dur">Live online · ca. 90 Minuten</p>
+        <span class="fmt">◇ 100 % online, keine Anfahrt</span>
+        <ul>
+          <li>ChatGPT &amp; Co. verständlich, ganz ohne Fachchinesisch</li>
+          <li>Chancen und Risiken realistisch einordnen</li>
+          <li>Praktische Tipps für Beruf, Alltag und Familie</li>
+          <li>Im Anschluss Zugang zum <a href="https://www.campus-zukunftszauberai.de" target="_blank" rel="noopener" style="color:var(--purple-deep);text-decoration:underline;text-underline-offset:2px;">Zukunftszauber Campus</a> zum Vertiefen</li>
+        </ul>
+        <p class="price">49 €<small>pro Person, pro Termin</small></p>
+        <a class="btn primary" href="#kontakt">Platz sichern</a>
+      </article>
+
+      <article class="pack">
+        <span class="badge" style="background:linear-gradient(135deg,var(--purple),var(--purple-deep));">Kostenlos</span>
+        <span class="kind">Zum Reinschnuppern</span>
+        <h3>KI-Info-Abend</h3>
+        <p class="dur">Live online · ca. 30 Minuten</p>
+        <span class="fmt">◇ 100 % online, keine Anfahrt</span>
+        <ul>
+          <li>Der lockere Einstieg, bevor du dich für einen Kurs entscheidest</li>
+          <li>Was KI heute kann und wo ihre Grenzen liegen</li>
+          <li>Offene Fragerunde, bring deine Fragen einfach mit</li>
+        </ul>
+        <p class="price">kostenlos<small>unverbindlich &amp; ohne Risiko</small></p>
+        <a class="btn ghost" href="#kontakt">Kostenlos anmelden</a>
+      </article>
+    </div>
+    <p class="packnote">Du möchtest einen Kurs für eine ganze Schulklasse oder Gruppe? Sieh dir unten die Workshops für Organisationen an oder frag direkt an.</p>
+  </section>
 
   <section id="angebote" class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Vor Ort &amp; online</span>
+      <span class="eyebrow">Für Unternehmen, Kommunen &amp; Schulen</span>
       <h2>Vom ersten Aha-Moment bis zur Umsetzung</h2>
       <p><strong>Jedes Format gibt es vor Ort bei Ihnen oder als Live-Webinar, ortsunabhängig und ohne Anfahrtskosten.</strong> Alles wird auf Ihre Arbeitsabläufe zugeschnitten, ob Amtsstube, Vereinsheim, Besprechungsraum oder Bildschirm.</p>
     </div>
@@ -295,7 +378,7 @@ footer a:hover{color:var(--purple);}
           <li>Rechtlicher Kompass: DSGVO &amp; Co. verständlich</li>
           <li>Fragerunde ohne Zeitdruck</li>
         </ul>
-        <p class="price">590 €<small>zzgl. Anfahrt (nur vor Ort)</small></p>
+        <p class="price">ab 590 €<small>zzgl. Anfahrt (nur vor Ort)</small></p>
         <a class="btn ghost" href="#kontakt">Termin anfragen</a>
       </article>
 
@@ -312,7 +395,7 @@ footer a:hover{color:var(--purple);}
           <li>Kompakte Handreichung zum Nachschlagen</li>
           <li><strong>Inklusive: 6 Monate Campus-Pass</strong> auf dem Zukunftszauber Campus für alle Teilnehmenden (Wert: bis zu 720&nbsp;€)</li>
         </ul>
-        <p class="price">990 €<small>zzgl. Anfahrt (nur vor Ort)</small></p>
+        <p class="price">ab 990 €<small>zzgl. Anfahrt (nur vor Ort)</small></p>
         <a class="btn primary" href="#kontakt">Termin anfragen</a>
       </article>
 
@@ -328,28 +411,36 @@ footer a:hover{color:var(--purple);}
           <li>30 Tage E-Mail-Begleitung nach dem Workshop</li>
           <li><strong>Inklusive: 12 Monate Campus-Pass</strong> auf dem Zukunftszauber Campus für alle Teilnehmenden (Wert: bis zu 1.400&nbsp;€)</li>
         </ul>
-        <p class="price">1.490 €<small>zzgl. Anfahrt (nur vor Ort)</small></p>
+        <p class="price">ab 1.490 €<small>zzgl. Anfahrt (nur vor Ort)</small></p>
         <a class="btn ghost" href="#kontakt">Termin anfragen</a>
       </article>
 
-      <article class="pack">
-        <span class="badge" style="background:linear-gradient(135deg,var(--purple),var(--purple-deep));">Neu · Online</span>
-        <span class="kind">Für Einzelpersonen</span>
-        <h3>Offenes Online-Webinar</h3>
-        <p class="dur">Live online · von überall · pro Person buchbar</p>
-        <span class="fmt">◇ 100 % online, keine Anfahrt</span>
-        <ul>
-          <li>Offene Termine, zu denen sich auch einzelne Personen anmelden können</li>
-          <li>Kompakte Live-Einführung mit Demos und Fragerunde</li>
-          <li>Ideal, wenn kein Team-Budget für einen Vor-Ort-Termin da ist</li>
-          <li>Im Anschluss Zugang zum <a href="https://www.campus-zukunftszauberai.de" target="_blank" rel="noopener" style="color:var(--purple-deep);text-decoration:underline;text-underline-offset:2px;">Zukunftszauber Campus</a> zum Vertiefen</li>
-        </ul>
-        <p class="price">auf Anfrage<small>pro Person, ohne Anfahrt</small></p>
-        <a class="btn ghost" href="#kontakt">Platz anfragen</a>
-      </article>
-      <!-- TODO: Festen Webinar-Preis (z. B. pro Person oder pro offenem Termin) festlegen und "auf Anfrage" ersetzen. -->
     </div>
     <p class="packnote">Sonderformat gewünscht, etwa eine Schulung nur für Führungskräfte oder das Ehrenamt? Fragen Sie einfach an.</p>
+  </section>
+
+  <section id="leistungen" class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">KI-gestützt gestaltet</span>
+      <h2>Weitere Leistungen</h2>
+      <p>Neben Workshops gestalte ich auch Ihren Auftritt: schnell und modern mit KI, von der Bildmarke bis zur fertigen Website. Diese Seite hier ist der beste Beweis.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service">
+        <span class="kind">Logodesign</span>
+        <h3>Logo &amp; Bildmarke</h3>
+        <p>Ein klares, wiedererkennbares Logo für Verein, Verwaltung oder Betrieb, inklusive passender Farb- und Schriftwelt und fertiger Dateien für Web und Druck.</p>
+        <p class="price">Preis auf Anfrage</p>
+        <a class="btn ghost" href="#kontakt">Logo anfragen</a>
+      </article>
+      <article class="service">
+        <span class="kind">Webseitengestaltung</span>
+        <h3>Website &amp; Landingpage</h3>
+        <p>Moderne, schnelle Seiten, die auf jedem Gerät funktionieren: Landingpages, Vereins- und Unternehmensseiten, auf Wunsch mit Kontaktformular und Anbindung an Ihre Kanäle.</p>
+        <p class="price">Preis auf Anfrage</p>
+        <a class="btn ghost" href="#kontakt">Website anfragen</a>
+      </article>
+    </div>
   </section>
 
   <section id="praxis" class="wrap">
@@ -449,7 +540,7 @@ footer a:hover{color:var(--purple);}
 </main>
 
 <footer class="wrap">
-  <p>© 2026 Zukunftszauber AI · Carolin Laux</p>
+  <p>© 2026 Carolin Laux · Zukunftszauber AI. Alle Rechte vorbehalten.</p>
   <p><a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutzerklärung</a> · <a href="#" id="cookie-settings">Cookie-Einstellungen</a></p>
 </footer>
 
